@@ -1,6 +1,7 @@
 #ifndef WORDLE_H
 #define WORDLE_H
 
+#include <vector>
 #include <set>
 #include <string>
 
@@ -15,6 +16,10 @@
  * @param [in] dict - Dictionary of strings of legal words
  * @return std::set<std::string> - Set of all words that meet the criteria
  */
+void permutations(std::set<std::string>& set, std::set<int> inlist, std::string word, int l, int r);
+void alphabetcombinations(std::set<std::string>& set, std::string str, std::vector<int> emptyspaces, int empty);
+
+
 std::set<std::string> wordle(
     const std::string& in,
     const std::string& floating,
